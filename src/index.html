@@ -12,6 +12,95 @@
   </head>
   <body>
     <h1>HTML Form</h1>
+
+    <form
+     action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+     method="post"
+     onsubmit="onSubmit ()"
+    >
+      <fieldset class="fieldset">
+        <legend>Personal information</legend>
+        <label for="surname" class="form-field">
+          Surname:
+          <input
+            type="text"
+            name="Surname"
+            id="surname"
+          >
+        </label>
+
+        <label for="name" class="form-field">
+          Name:
+          <input
+            type="text"
+            name="name"
+            id="name"
+          >
+        </label>
+
+        <label for="age" class="form-field">
+          How old are You?
+          <input
+            type="text"
+            name="age"
+            id="age"
+            value="12"
+          >
+        </label>
+
+        <label for="dateOfBirth" class="form-field">
+          Full date of birth:
+          <input
+            type="date"
+            name="dateOfBirth"
+            id="dateOfBirth"
+          >
+        </label>
+
+        <label
+          for="accept-the-terms"
+          class="form-field">
+          I accept the term of the agreement
+          <input
+            type="checkbox"
+            name="accept"
+            id="accept-the-terms">
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Registration</legend>
+        <label for="email" class="form-field">
+          E-mail:
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@example.com"
+          >
+        </label>
+
+        <label for="password" class="form-field">
+          Password:
+          <input
+            type="password"
+            name="password"
+            id="password"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>An interesting fast about you!</legend>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+      </fieldset>
+
+      <button>Submit</button>
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
+
