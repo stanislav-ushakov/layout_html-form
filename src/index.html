@@ -26,6 +26,7 @@
             type="text"
             name="Surname"
             id="surname"
+            required
           >
         </label>
 
@@ -35,16 +36,20 @@
             type="text"
             name="name"
             id="name"
+            required
           >
         </label>
 
         <label for="age" class="form-field">
           How old are You?
           <input
-            type="text"
+            type="number"
             name="age"
-            id="age"
+            min="10"
+            max="100"
             value="12"
+            id="age"
+            required
           >
         </label>
 
@@ -54,6 +59,7 @@
             type="date"
             name="dateOfBirth"
             id="dateOfBirth"
+            required
           >
         </label>
 
@@ -64,7 +70,10 @@
           <input
             type="checkbox"
             name="accept"
-            id="accept-the-terms">
+            id="accept-the-terms"
+            required
+          >
+
         </label>
       </fieldset>
 
@@ -77,6 +86,7 @@
             name="email"
             id="email"
             placeholder="email@example.com"
+            required
           >
         </label>
 
@@ -86,21 +96,122 @@
             type="password"
             name="password"
             id="password"
+            minlength="5"
+            maxlength="10"
+            required
           >
         </label>
       </fieldset>
 
       <fieldset class="fieldset">
         <legend>An interesting fast about you!</legend>
+        <div class="form-field">
+          <label for="loveCats">
+            Do you love cats?
+            <input
+              type="radio"
+              name="cats"
+              id="loveCats"
+              value="y"
+            >
+            - Yes
+          </label>
+
+          <label for="loveCats2">
+            <input
+              type="radio"
+              name="cats"
+              id="loveCats2"
+              value="n"
+            >
+            - No
+          </label>
+        </div>
+
+        <label for="color" class="form-field">
+          What are your favorite color?
+
+          <select
+           name="color"
+           id="color"
+           required
+          >
+            <option
+             value=""
+             disabled
+             selected
+            >
+            Choose a color
+            </option>
+            <option value="#000">Black</option>
+            <option value="#f00">Red</option>
+            <option value="#0f0">Green</option>
+            <option value="#00f">Blue</option>
+          </select>
+        </label>
+
+        <label for="bed" class="form-field">
+          What time do you go to bed?
+
+          <input
+            type="time"
+            name="bed"
+            id="bed"
+          >
+        </label>
+
+        <label for="cars" class="form-field">
+          What are you favorite brand of cars?
+
+          <select
+           name="cars"
+           id="cars"
+           multiple
+          >
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+
+        <label for="work" class="form-field">
+          How do you rate our work?
+
+          <input
+           type="range"
+           name="work"
+           id="work"
+           min="0"
+           max="10"
+          >
+        </label>
       </fieldset>
 
       <fieldset class="fieldset">
         <legend>Additional info:</legend>
+        <label for="comments" class="form-field">
+          Comments:
+
+          <textarea
+           name="comments"
+           id="comments"
+         ></textarea>
+        </label>
+
+        <label for="recommendUs" class="form-field">
+          Would you recommend us?
+
+          <select name="recommendUs" id="recommendUs">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
       </fieldset>
 
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
+
 
